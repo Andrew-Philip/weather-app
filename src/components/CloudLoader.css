@@ -1,0 +1,77 @@
+.weather-loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.loader{
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  z-index: 50;
+  position: relative;
+  animation: bounce 0.9s infinite;
+}
+
+@keyframes bounce {
+  10%{
+    height: 300px;
+    width: 300px;
+  }
+  30%{
+    height: 300px;
+    width: 300px;
+  }
+  50%{
+    height: 200px;
+    width: 300px;
+    transform: translateY(340px);
+  }
+  70%{
+    height: 240px;
+    width: 300px;
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+}
+
+.container{
+  width: 300px;
+  height: 300px;
+  margin: 5% auto;
+}
+
+.shadow{
+  background-color: rgba(100, 100, 100, 0.5);
+  height: 40px;
+  width: 250px;
+  border-radius: 50%;
+  margin: 250px auto;
+  z-index: 1;
+  animation: shrink 0.9s infinite;
+}
+
+.position{
+  background-color: red;
+}
+
+@keyframes shrink {
+  10%{
+    transform: scaleX(1.5);
+  }
+  30%{
+    transform: scaleX(0.9);
+  }
+  50%{
+    transform: scaleX(0.8);
+  }
+  60%{
+    transform: scaleX(0.7);
+  }
+  100%{
+    transform: scaleX(0.6);
+  }
+
+}

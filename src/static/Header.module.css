@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    background-color: aqua;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+/* searchbar */
+.searchbar{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 7px;
+    width: 350px;
+}
+
+.decoration{
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #ebebeb;
+    background-color: #f7f7f7;
+}
+
+.box{
+    display: flex;
+    background-color: white;
+    width: 420px;
+    border-radius: 3px;
+}
