@@ -53,7 +53,6 @@ const LocationInfo = ({country}) => {
                             <span className={toggleTemp ? contentCSS.notVisible : contentCSS.visible}>{weather.tempC}°C</span>
                     </button>
                 
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 <div className={contentCSS.conditionContainer}>
                     <div className={contentCSS.iconContainer}>
                         <div className={contentCSS.iconCircle}>
@@ -64,7 +63,7 @@ const LocationInfo = ({country}) => {
                 </div>
 
                 <span className={contentCSS.timeZone}>{weather.localtime.slice(10)}</span>
-                
+                sadffsafffffdfdsfdsdsffdsaasdfasdfsadfasdf
                 <div className={contentCSS.location}>
                     <div className={contentCSS.countryData}>
                         <span className={contentCSS.countryIcon}>
