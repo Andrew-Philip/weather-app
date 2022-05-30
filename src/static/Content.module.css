@@ -2,6 +2,8 @@
     position: relative;
     top: 40px;
     margin: auto 70px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px #979797;
 }
 
 .imgData{
@@ -17,7 +19,7 @@
 }
 
 .locationData{
-    background-color: rgb(175, 175, 175);
+    background-color: #B3E8E5;
     padding: 10px;
     border-radius: 0px 7px 7px 0px;
     flex-grow: 1;
@@ -179,13 +181,22 @@
 }
 
 /* details */
-
+/* HEADER */
 .basicData{
-    background-color: red;
+    background-color: #eeeeee;
     border-radius: 7px;
     margin-top: 25px;
+    box-shadow: 3px 3px 3px #979797;
     flex-grow: 1;
     width: fit-content;
+}
+
+.textIndicator{
+    position: absolute;
+    background-color: #3BACB6;
+    border-radius: 7px;
+    z-index: 40;
+    padding: 5px;
 }
 
 .tooltipIconBasic{
@@ -203,13 +214,17 @@
     width: 170px;
 }
 
+.principalData > .dataIcon{
+    position: relative;
+    top: 4px;
+}
+
 
 .feels{
-    background-color: blue;
     border-radius: 7px;
     font-size: 15px;
     padding: 3px;
-    width: 50px;
+    width: 70px;
     margin: 2px;
     align-self: center;
 }
@@ -219,17 +234,10 @@
     font-size: 30px;
 }
 
-.textIndicator{
-    position: absolute;
-    background-color: blue;
-    border-radius: 7px;
-    z-index: 40;
-    padding: 5px;
-}
 
 .textIndicatorBtn{
     position: relative;
-    background-color: blue;
+    background-color: #3BACB6;
     border-radius: 7px;
     z-index: 40;
     height: 20px;
@@ -246,6 +254,7 @@
 .dataContainerBtn{
     margin: 50px 10px;
     display: flex;
+    
 }
 
 .dataIcon{
@@ -262,6 +271,13 @@
     padding: 7px;
     border-radius: 7px;
     font-size: 30px;
+    box-shadow: 3px 3px 3px #979797;
+    background-color: #eeeeee;
+}
+
+.basicDataPress:hover{
+    background-color: #dddada;
+    cursor: pointer;
 }
 
 .basicDataPress > span{
@@ -297,7 +313,7 @@
     position: absolute;
     left: 20px;
     top: 18px;
-    background-color: red;
+    background-color: #3BACB6;
     padding: 5px;
     height: 15px;
     width: 15px;
@@ -305,3 +321,17 @@
 }
 
 
+.map{
+    height: 230px;
+    width: 320px;
+    border-radius: 10px;
+    border: 1px solid #42a1ce;
+    box-shadow: 3px 3px 3px #979797;
+}
+
+.mapContainer{
+    position: absolute;
+    z-index: 100;
+    left: 920px;
+    top: 135px;
+}

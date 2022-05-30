@@ -26,7 +26,7 @@ const CurrentLocation = () => {
             }
         })()
     }, [coords]);
-    
+
     return (
         <>
             {country 

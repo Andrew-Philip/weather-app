@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import forecastCSS from '../static/Forecast.module.css'
+import { MdDateRange } from 'react-icons/md'
+import { FaCloudMoon, FaCloudSun } from 'react-icons/fa';
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
 
 const Forecast = ({country, el}) => {
     const { weather } = country;
@@ -9,16 +12,26 @@ const Forecast = ({country, el}) => {
     for(let i = 0; i <= 2; i++){
         countryData.push(
             <div>
-                <p>{weather.forecastday[i].date}</p>
+                <div className={forecastCSS.dateContainer}>
+                    <MdDateRange className={forecastCSS.iconDate}/>
+                    <p className={forecastCSS.currentDate}>{weather.forecastday[i].date}</p>
+                </div>
 
                 <div className={forecastCSS.forecastHours}>
                     {weather.forecastday[i].hour.map((hours, index) => {
                         return (
                             <div className={forecastCSS.hourContainer} key={index}>
-                                <img src={hours.condition.icon}></img>
-                                <span>{hours.condition.text}</span>
-                                <span>{hours.time.slice(10)}</span>
-                                <span>{hours.temp_c}°C {hours.temp_f}°F</span>
+                                <div>
+                                    {hours.is_day 
+                                    ? <FaCloudSun className={forecastCSS.dayIcon}/>
+                                    : <FaCloudMoon className={forecastCSS.nightIcon}/>}
+                                </div>
+                                <img className={forecastCSS.hourlyIcon} src={hours.condition.icon}></img>
+                                <div className={forecastCSS.adtionalData}>
+                                    <span>{hours.condition.text}</span>
+                                    <span>{hours.time.slice(10)}</span>
+                                    <span>{hours.temp_c}°C {hours.temp_f}°F</span>
+                                </div>
                             </div>
                         ) 
                     })}
@@ -50,8 +63,8 @@ const Forecast = ({country, el}) => {
     return (
         <div className={forecastCSS.containerSlider}>
             <div className={forecastCSS.buttonsContainer}>
-                <button onClick={previousSlide}>previous</button>
-                <button onClick={nextSlide}>next</button>
+                <button onClick={previousSlide}><AiOutlineArrowLeft className={forecastCSS.btnText}/></button>
+                <button onClick={nextSlide}><AiOutlineArrowRight className={forecastCSS.btnText}/></button>
             </div>
             {countryData.map((location, index) => {
                 return (

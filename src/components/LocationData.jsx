@@ -9,7 +9,7 @@ const LocationData = ({value, isEmpty}) => {
     const [country, setCountry] = useState(); 
     const [loader, setLoader] = useState(false);
     const [error, setError] = useState(false);    
- 
+
     useEffect(() => {
       setError(false);
       value 

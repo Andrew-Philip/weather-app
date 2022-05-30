@@ -16,7 +16,7 @@ export const getWeather = async(data) => {
 		{ condition, cloud, humidity, feelslike_c, feelslike_f, is_day, precip_mm, precip_in, pressure_mb, pressure_in, temp_c, temp_f, wind_kph, wind_mph, wind_degree, wind_dir } = current,
 		{ text, icon } = condition,
 		{ forecastday } = forecast,
-		{ country, localtime, name, region, localtime_epoch } = location;
+		{ country, localtime, name, region, lon, lat } = location;
 
 		const weather = {
 			//CURRENT
@@ -50,6 +50,8 @@ export const getWeather = async(data) => {
 
 			//LOCATION
 			country,
+			longitude:lon,
+			latitude:lat,
 			localtime,
 			name,
 			region,

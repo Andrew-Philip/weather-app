@@ -1,10 +1,11 @@
 import Forecast from "./Forecast";
+import Map from "./Map";
 import contentCSS from '../static/Content.module.css'
 import forecastCSS from '../static/Forecast.module.css'
 import { useState } from "react";
 import { HiSwitchVertical } from 'react-icons/hi';
 import { GiWorld } from 'react-icons/gi';
-import { WiHumidity } from 'react-icons/wi'
+import { WiHumidity, WiThermometer, WiTornado, WiCloud } from 'react-icons/wi'
 import { FcInfo } from 'react-icons/fc'
 import { TiWeatherDownpour } from 'react-icons/ti'
 import { MdAir } from 'react-icons/md'
@@ -88,7 +89,7 @@ const LocationInfo = ({country}) => {
                             <span className={contentCSS.textIndicator}>Se siente como</span> 
                             <div className={contentCSS.basicData}>
                                 <span className={contentCSS.principalData}>
-                                <WiHumidity className={contentCSS.dataIcon}/>
+                                <WiThermometer className={contentCSS.dataIcon}/>
                                     <span className={contentCSS.feels}>{weather.feelslikeC}°C</span>
                                     <span className={contentCSS.feels}>{weather.feelslikeF}°F</span>
                                 </span>
@@ -98,7 +99,7 @@ const LocationInfo = ({country}) => {
                         <div className={contentCSS.dataContainer}>
                             <span className={contentCSS.textIndicator}>Viento</span> 
                             <div className={contentCSS.basicData}>
-                                <WiHumidity className={contentCSS.dataIcon}/>
+                                <WiTornado className={contentCSS.dataIcon}/>
                                 <span>{weather.windDIR}-{weather.windDEGREE}</span>
                                 <FcInfo className={contentCSS.tooltipIconBasic}/>
                             </div>
@@ -107,7 +108,7 @@ const LocationInfo = ({country}) => {
                         <div className={contentCSS.dataContainer}>
                             <span className={contentCSS.textIndicator}>% de nubes</span> 
                             <div className={contentCSS.basicData}>
-                                <WiHumidity className={contentCSS.dataIcon}/>
+                                <WiCloud className={contentCSS.dataIcon}/>
                                 <span>{weather.cloudPercent}%</span>
                                 <FcInfo className={contentCSS.tooltipIconBasic}/>
                             </div>
@@ -147,6 +148,10 @@ const LocationInfo = ({country}) => {
                     </div>
                 </div>   
             </div>
+            <div className={contentCSS.mapContainer}>
+                <Map latitude={weather.latitude} longitude={weather.longitude}/>
+            </div>
+
         </div>
         <div className={forecastCSS.forecastContainer}>
                 <Forecast country={country}/>
