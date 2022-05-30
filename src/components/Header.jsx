@@ -9,9 +9,10 @@ const Header = () => {
     const [isEmpty, setIsEmpty] = useState(true);
 
     const handleInput = (e) => {
-        const newSearch = e.target.value;
-        setValue(newSearch);
-        e.target.value ? setIsEmpty(false) : setIsEmpty(true);
+        setTimeout(() => {
+            const newSearch = e.target.value;
+            setValue(newSearch);
+        }, 1500)
     };
 
     return(
@@ -20,7 +21,13 @@ const Header = () => {
             WEATHER BIG BANG APP         
             <div className={headerCSS.box}>
                 <BsCloudSunFill className={headerCSS.decoration}/>
-                <input className={headerCSS.searchbar} name="search" type="text" placeholder="..." onChange={handleInput}/>
+                <input onInput={(e) => 
+                    e.target.value ? setIsEmpty(false) : setIsEmpty(true)} 
+                    className={headerCSS.searchbar} 
+                    name="search" 
+                    type="text" 
+                    placeholder="..." 
+                    onChange={handleInput}/>
             </div>   
             <div>Tooltip info</div>
         </nav>

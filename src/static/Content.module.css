@@ -1,3 +1,307 @@
 .container{
-    background-color: red;
+    position: relative;
+    top: 40px;
+    margin: auto 70px;
 }
+
+.imgData{
+    display: flex;
+    align-items: stretch;
+}
+
+.timeImg{
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.locationData{
+    background-color: rgb(175, 175, 175);
+    padding: 10px;
+    border-radius: 0px 7px 7px 0px;
+    flex-grow: 1;
+}
+
+.conditionContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff1c;
+    border-radius: 7px 0px 0px 7px;
+    align-items: center;
+    width: 150px;
+    margin: 10px 430px;
+    padding: 5px;
+    top: 1;
+    left: 1;
+    bottom: 1;
+    right: 1;
+}
+
+.iconContainer{
+    background-color: #c9c9c963;
+    border: solid 1px #adadad34;
+    width: 95%;
+    text-align: center;
+    border-radius: 7px;
+    padding: 2px;
+}
+
+.iconCircle{
+    margin: auto;
+    background-color: #30303034;
+    border-radius: 50%;
+    padding: 5px;
+    height: 60px;
+    width: fit-content;
+}
+
+.text{
+    color: white;
+    background-color: #c9c9c963;
+    border: solid 1px #adadad34;
+    padding: 3px;
+    text-shadow: -1px 1px 0 #686868, 1px 1px 0 #686868, 1px -1px 0 #686868, -1px -1px 0 #686868;
+    border-radius: 7px;
+    margin: 5px;
+    width: 95%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.timeZone{
+    position: absolute;
+    margin: 10px 410px;
+    font-size: 50px;
+    color: white;
+    border-radius: 7px 0px 0px 7px;
+    background-color: #c9c9c963;
+    text-shadow: -0.6px 0.6px 0 #686868, 0.6px 0.6px 0 #686868, 0.6px -0.6px 0 #686868, -0.6px -0.6px 0 #686868;
+    width: 180px;
+    text-align: center;
+    top: 1;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* data */
+
+.temperatureSwitch{
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 0px 7px 7px 0px;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    background-color: #ffffff1c;
+    height: 45px;
+}
+
+.temperatureSwitch > span{
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 7px;
+    height: 40px;
+    color: #fdfdfdbd;
+    margin-left: 70px;
+    margin-top: -4px;
+}
+
+.temperatureSwitch:hover{
+    background-color: #c7c7c748;
+    cursor: pointer;
+}
+
+.switchIcon{
+    position: relative;
+    background-color: rgba(206, 206, 206, 0.281);
+    color: #fdfdfdbd;
+    padding: 5px;
+    height: 50%;
+    width: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.location{
+    position: absolute;
+    top: 1;
+    left: 0;
+    bottom: 0;
+    right: 1;
+    background-color: #ffffff1c;
+    color: rgb(250, 250, 250);
+    display: inline-block;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 0px 7px 7px 0px;
+}
+
+.countryData{
+    margin: 5px;
+    background-color: #c9c9c963;
+    text-shadow: -0.4px 0.4px 0 #686868, 0.4px 0.4px 0 #686868, 0.4px -0.4px 0 #686868, -0.4px -0.4px 0 #686868;
+    border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+}
+
+.regionData{
+    margin: 5px 5px;
+    background-color: #c9c9c963;
+    text-shadow: -0.4px 0.4px 0 #686868, 0.4px 0.4px 0 #686868, 0.4px -0.4px 0 #686868, -0.4px -0.4px 0 #686868;
+    text-align: center;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.countryName{
+    font-size: 21px;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.visible{
+    position: absolute;
+    visibility: visible;
+}
+
+.notVisible{
+    visibility: hidden;
+}
+
+/* details */
+
+.basicData{
+    background-color: red;
+    border-radius: 7px;
+    margin-top: 25px;
+    flex-grow: 1;
+    width: fit-content;
+}
+
+.tooltipIconBasic{
+    position: relative;
+    left: 10px;
+    bottom: 15px;
+}
+
+.headerContent{
+    display: flex;
+}
+
+.principalData{
+    display: flex;
+    width: 170px;
+}
+
+
+.feels{
+    background-color: blue;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 3px;
+    width: 50px;
+    margin: 2px;
+    align-self: center;
+}
+
+.basicData > span{
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.textIndicator{
+    position: absolute;
+    background-color: blue;
+    border-radius: 7px;
+    z-index: 40;
+    padding: 5px;
+}
+
+.textIndicatorBtn{
+    position: relative;
+    background-color: blue;
+    border-radius: 7px;
+    z-index: 40;
+    height: 20px;
+    bottom: 20px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.dataContainer{
+    margin: 5px 10px;
+    
+}
+
+.dataContainerBtn{
+    margin: 50px 10px;
+    display: flex;
+}
+
+.dataIcon{
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.basicDataPress{
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 260px;
+    z-index: 30;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 30px;
+}
+
+.basicDataPress > span{
+    position: absolute;
+    text-align: center;
+    vertical-align: center;
+    font-size: 30px;
+    margin-top: 4px;
+}
+
+.equivalent{
+    position: absolute;
+    text-align: center;
+    vertical-align: center;
+    font-size: 30px;
+    margin: 7px auto;
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+
+
+.tooltipIcon{
+    position: relative;
+    font-size: 20px;
+    margin-left: 50px;
+    vertical-align: middle;
+    padding: 10px;
+    bottom: 25px;
+    left: 80px;
+}
+
+.dataSwitch{
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    background-color: red;
+    padding: 5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+

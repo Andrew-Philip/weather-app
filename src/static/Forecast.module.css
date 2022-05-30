@@ -1,0 +1,78 @@
+/* forecast */
+
+.forecast{
+    background-color: yellow;
+    padding: 5px;
+    text-align: center;
+}
+
+.forecastContainer{
+    margin: 60px 70px;
+    background-color: red;
+    height: 100%;
+    position: relative;
+    bottom: 90px;
+}
+
+/* FORECAST HOURS */
+.hourContainer{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    height: 150px;
+    background-color: brown;
+}
+
+.hourContainer > img{
+    height: 50px;
+    width: 50px;
+}
+
+.hourContainer > span{
+    font-size: 15px;
+}
+
+.forecastHours{
+    background-color: blue;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;    
+}
+
+.activeAnim {
+    opacity: 1;   
+}
+
+.buttonsContainer{
+    display: flex;
+    margin-top: 150px;
+    width: 1000;
+    text-align: center;
+}
+
+.buttonsContainer > button{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    height: 40px;
+    margin: 5px;
+    width: 50%;
+}
+
+.containerSlider {
+    max-width: 100%;
+    height: 100%;
+    margin: 100px auto 0;
+    position: relative;
+    overflow: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+

@@ -13,10 +13,10 @@ export const getWeather = async(data) => {
 		jsonResponse = await response.json();
 	
 		const { location, current, forecast } = jsonResponse,
-		{ condition, cloud, humidity, feelslike_c, feelslike_f, is_day, precip_mm, precip_in, pressure_mb, pressure_in, temp_c, temp_f, wind_kph, wind_mph, wind_degree } = current,
+		{ condition, cloud, humidity, feelslike_c, feelslike_f, is_day, precip_mm, precip_in, pressure_mb, pressure_in, temp_c, temp_f, wind_kph, wind_mph, wind_degree, wind_dir } = current,
 		{ text, icon } = condition,
 		{ forecastday } = forecast,
-		{ country, localtime, name, region } = location;
+		{ country, localtime, name, region, localtime_epoch } = location;
 
 		const weather = {
 			//CURRENT
@@ -39,18 +39,22 @@ export const getWeather = async(data) => {
 			windMPH:wind_mph,
 			windKPH:wind_kph,
 			//Direccion del viento en grados
-			windDIR:wind_degree,
+			windDEGREE:wind_degree,
+			windDIR:wind_dir,
+			icon,
+			text,
 			
 			//FORECAST
 			//Arreglo con prediccion de los proximos 3 dias
 			forecastday,
 
+			//LOCATION
 			country,
 			localtime,
 			name,
 			region,
 		};
-
+		console.log(jsonResponse)
 		return {
 			status: 200,
 			weather

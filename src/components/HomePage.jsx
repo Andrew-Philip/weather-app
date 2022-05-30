@@ -2,6 +2,7 @@ import CurrentLocation from "./CurrentLocation";
 
 const HomePage = () => {
     
+
     return (
         <div>
             <CurrentLocation/>
