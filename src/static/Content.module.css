@@ -11,6 +11,10 @@
     align-items: stretch;
 }
 
+.mobileFirstImg{
+    display: none;
+}
+
 .timeImg{
     width: 600px;
     height: 100%;
@@ -334,4 +338,41 @@
     z-index: 100;
     left: 920px;
     top: 135px;
+}
+
+
+@media only screen and (max-width: 1189px){
+
+    .imgData{
+        display: block;
+        object-fit: contain;
+    }
+
+    .mobileFirstImg{
+        display: block;
+        background-color: red;
+    }
+
+    .conditionContainer{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: #cf67671c;
+        border-radius: 7px 0px 0px 7px;
+        align-items: center;
+        
+        width: 150px;
+        padding: 5px;
+    }
+
+    .timeImg{
+        display: none;
+        border-radius: 7px;
+        width: 100%;
+    }
+
+    .mapContainer{
+        position: relative;
+        
+    }
 }

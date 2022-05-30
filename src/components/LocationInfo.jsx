@@ -38,9 +38,9 @@ const LocationInfo = ({country}) => {
         <>
         <div className={contentCSS.container}>
             <div className={contentCSS.imgData}>
-            {weather.isDay
-                ?
-                <div>
+                {weather.isDay
+                
+                ? <div>
                     <img className={contentCSS.timeImg} src={require("../assets/day-night/day.jpg")}></img>
                 </div>
                 
@@ -52,6 +52,8 @@ const LocationInfo = ({country}) => {
                             <span className={toggleTemp ? contentCSS.visible : contentCSS.notVisible}>{weather.tempF}°F</span>
                             <span className={toggleTemp ? contentCSS.notVisible : contentCSS.visible}>{weather.tempC}°C</span>
                     </button>
+                
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 <div className={contentCSS.conditionContainer}>
                     <div className={contentCSS.iconContainer}>
                         <div className={contentCSS.iconCircle}>
@@ -60,7 +62,9 @@ const LocationInfo = ({country}) => {
                     </div>
                     <span className={contentCSS.text}>{weather.text}</span>
                 </div>
+
                 <span className={contentCSS.timeZone}>{weather.localtime.slice(10)}</span>
+                
                 <div className={contentCSS.location}>
                     <div className={contentCSS.countryData}>
                         <span className={contentCSS.countryIcon}>
@@ -74,7 +78,6 @@ const LocationInfo = ({country}) => {
                 </div>
 
                 <div className={contentCSS.locationData}>
-                    
                     <div className={contentCSS.headerContent}>
                         <div className={contentCSS.dataContainer}>
                             <span className={contentCSS.textIndicator}>Humedad</span> 
