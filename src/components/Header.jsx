@@ -12,13 +12,12 @@ const Header = () => {
         setTimeout(() => {
             const newSearch = e.target.value;
             setValue(newSearch);
-        }, 1500)
+        }, 2500)
     };
 
     return(
         <>
-        <nav className={headerCSS.container}>
-            WEATHER BIG BANG APP         
+        <nav className={headerCSS.container}>   
             <div className={headerCSS.box}>
                 <BsCloudSunFill className={headerCSS.decoration}/>
                 <input onInput={(e) => 
@@ -26,10 +25,9 @@ const Header = () => {
                     className={headerCSS.searchbar} 
                     name="search" 
                     type="text" 
-                    placeholder="..." 
+                    placeholder="Pais, region, estado..." 
                     onChange={handleInput}/>
             </div>   
-            <div>Tooltip info</div>
         </nav>
             <LocationData value={value} isEmpty={isEmpty}></LocationData>
         </> 

@@ -1,32 +1,35 @@
 .container{
-    position: relative;
-    top: 40px;
-    margin: auto 70px;
+    margin: 70px 40px;
     border-radius: 7px;
     box-shadow: 3px 3px 3px #979797;
 }
 
 .imgData{
-    display: flex;
-    align-items: stretch;
+    position: relative;
 }
 
-.mobileFirstImg{
-    display: none;
+.imgContainer{
+    height: 100%;
 }
 
 .timeImg{
-    width: 600px;
-    height: 100%;
     object-fit: cover;
+    width: 695px;
+    height: 100%;
+    flex: 1;
     border-radius: 7px 0px 0px 7px;
+}
+
+.containerFlex{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .locationData{
     background-color: #B3E8E5;
     padding: 10px;
+    width: 628px;
     border-radius: 0px 7px 7px 0px;
-    flex-grow: 1;
 }
 
 .conditionContainer{
@@ -36,13 +39,12 @@
     background-color: #ffffff1c;
     border-radius: 7px 0px 0px 7px;
     align-items: center;
-    width: 150px;
-    margin: 10px 430px;
+    margin: 10px;
     padding: 5px;
-    top: 1;
+    top: 0;
     left: 1;
     bottom: 1;
-    right: 1;
+    right: 0;
 }
 
 .iconContainer{
@@ -78,7 +80,6 @@
 
 .timeZone{
     position: absolute;
-    margin: 10px 410px;
     font-size: 50px;
     color: white;
     border-radius: 7px 0px 0px 7px;
@@ -86,8 +87,9 @@
     text-shadow: -0.6px 0.6px 0 #686868, 0.6px 0.6px 0 #686868, 0.6px -0.6px 0 #686868, -0.6px -0.6px 0 #686868;
     width: 180px;
     text-align: center;
+    margin: 10px;
     top: 1;
-    left: 0;
+    left: 1;
     bottom: 0;
     right: 0;
 }
@@ -211,6 +213,8 @@
 
 .headerContent{
     display: flex;
+    flex-wrap: wrap;
+    flex: 1;
 }
 
 .principalData{
@@ -252,13 +256,13 @@
 
 .dataContainer{
     margin: 5px 10px;
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .dataContainerBtn{
     margin: 50px 10px;
-    display: flex;
-    
+    display: flex;  
 }
 
 .dataIcon{
@@ -268,6 +272,7 @@
 
 .basicDataPress{
     position: absolute;
+    display: inline-block;
     outline: none;
     border: none;
     width: 260px;
@@ -287,15 +292,18 @@
 .basicDataPress > span{
     position: absolute;
     text-align: center;
+
     vertical-align: center;
     font-size: 30px;
-    margin-top: 4px;
+}
+
+.basicDataPress > .dataIcon{
+    position: relative;
+    margin-left: -100px;
 }
 
 .equivalent{
-    position: absolute;
     text-align: center;
-    vertical-align: center;
     font-size: 30px;
     margin: 7px auto;
     margin-bottom: 32px;
@@ -324,55 +332,156 @@
     border-radius: 50%;
 }
 
+.bodyData{
+    position: relative;
+}
+
+.containerMap{
+    position: absolute;
+    float: right;
+    left: 290px;
+    bottom: -25px;
+}
 
 .map{
     height: 230px;
     width: 320px;
+    flex: 1;
     border-radius: 10px;
     border: 1px solid #42a1ce;
+    background-color: red;
     box-shadow: 3px 3px 3px #979797;
 }
 
-.mapContainer{
-    position: absolute;
-    z-index: 100;
-    left: 920px;
-    top: 135px;
-}
+@media only screen and (max-width: 1189px) {
 
-
-@media only screen and (max-width: 1189px){
-
-    .imgData{
-        display: block;
-        object-fit: contain;
-    }
-
-    .mobileFirstImg{
-        display: block;
-        background-color: red;
-    }
-
-    .conditionContainer{
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        background-color: #cf67671c;
-        border-radius: 7px 0px 0px 7px;
-        align-items: center;
-        
-        width: 150px;
-        padding: 5px;
-    }
-
-    .timeImg{
-        display: none;
+    .container{
+        margin:auto;
+        width: 100%;
         border-radius: 7px;
+        box-shadow: 3px 3px 3px #979797;
+    }
+    
+
+    .imgContainer{
+        height: 100%;
+    }
+
+    .bodyData{
+        position: relative;
+    }
+
+    .containerMap{
+        position: relative;
+        margin: 20px 290px;
         width: 100%;
     }
 
-    .mapContainer{
-        position: relative;
-        
+    .map{
+        height: 400px;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #42a1ce;
+        box-shadow: 3px 3px 3px #979797;
     }
-}
+
+    .principalData{
+        display: flex;
+        margin: auto;
+    }
+
+    .textIndicator{
+        position: absolute;
+        top: 0;
+        bottom: 1;
+        left: 0;
+        right: 0;
+    }
+
+    .textIndicatorBtn{
+        position: relative;
+        background-color: #3BACB6;
+        border-radius: 7px;
+        z-index: 40;
+        width: 100%;
+        text-align: center;
+        height: 20px;
+        bottom: 20px;
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    .dataContainer{
+        position: relative;
+        margin: 5px 10px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .basicData{
+        position: relative;
+        background-color: #eeeeee;
+        border-radius: 7px;
+        margin-top: 25px;
+        box-shadow: 3px 3px 3px #979797;
+        flex-grow: 1;
+        width: fit-content;
+    }
+
+    .basicDataPress{
+        position: absolute;
+        outline: none;
+        border: none;
+        z-index: 30;
+        width: 100%;
+        padding: 7px;
+        border-radius: 7px;
+        font-size: 30px;
+        box-shadow: 3px 3px 3px #979797;
+        background-color: #eeeeee;
+    }
+
+    .dataContainerBtn{
+        position: relative;
+       
+        margin: 50px 10px;
+        justify-content: center;
+        display: flex;  
+    }
+
+    .tooltipIconBasic{
+        position: absolute;
+        left: 10px;
+        bottom: 15px;
+    }
+
+    .tooltipIcon{
+        visibility: hidden;
+        position: absolute;
+        font-size: 20px;
+        margin: auto 990px;
+        bottom: 0px;
+        left: 1px;
+        top: 1px;
+        right: 0px;
+    }
+    
+    .timeImg{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        border-radius: 7px;
+    }
+
+
+    .locationData{
+        background-color: #B3E8E5;
+        padding: 10px;
+        width: 100%;
+        border-radius: 0px 0px 7px 7px;
+    }
+    
+  }
