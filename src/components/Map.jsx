@@ -1,14 +1,16 @@
 import contentCSS from '../static/Content.module.css'
-
 import {
     GoogleMap,
     useLoadScript,
     Marker
 } from '@react-google-maps/api';
 
-export default function Map({latitude, longitude, cName}) {
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+
+export default function Map({latitude, longitude}) {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey:"AIzaSyBRBwV5SkLrZc0PnLD1VAOcO11rtoAeLhU"
+        googleMapsApiKey:API_KEY
+    
     });
 
     if (!isLoaded) return <div>Loading...</div>

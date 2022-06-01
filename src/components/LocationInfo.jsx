@@ -90,7 +90,7 @@ const LocationInfo = ({country}) => {
                         </div>
                         
                         <div className={contentCSS.dataContainer}>
-                            <span className={contentCSS.textIndicator}>Se siente como</span> 
+                            <span className={contentCSS.textIndicator}>Sensación termica</span> 
                             <div className={contentCSS.basicData}>
                                 <span className={contentCSS.principalData}>
                                     <WiThermometer className={contentCSS.dataIcon}/>
@@ -122,7 +122,7 @@ const LocationInfo = ({country}) => {
                     <hr/>
                     <div className={contentCSS.bodyData}>
                         <div className={contentCSS.dataContainerBtn}>
-                            <span className={contentCSS.textIndicatorBtn}>Precipitacion</span> 
+                            <span className={contentCSS.textIndicatorBtn}>Precipitación</span> 
                             <button onClick={togglePressipitation} className={contentCSS.basicDataPress}>
                                 <HiSwitchVertical className={contentCSS.dataSwitch}/>
                                 <TiWeatherDownpour className={contentCSS.dataIcon}/>
@@ -131,11 +131,11 @@ const LocationInfo = ({country}) => {
                             </button>
                         </div>
                         <div className={contentCSS.dataContainerBtn}>
-                            <span className={contentCSS.textIndicatorBtn}>Presion</span> 
+                            <span className={contentCSS.textIndicatorBtn}>Presión</span> 
                             <button onClick={togglePressure} className={contentCSS.basicDataPress}>
                                 <HiSwitchVertical className={contentCSS.dataSwitch}/>
                                 <MdAir className={contentCSS.dataIcon}/>
-                                <span className={togglePressured ? contentCSS.visible : contentCSS.notVisible}>{weather.pressureMB}<span className={contentCSS.equivalent}>milibars</span></span>
+                                <span className={togglePressured ? contentCSS.visible : contentCSS.notVisible}>{weather.pressureMB}<span className={contentCSS.equivalent}>milibares</span></span>
                                 <span className={togglePressured ? contentCSS.notVisible : contentCSS.visible}>{weather.pressureINCH}<span className={contentCSS.equivalent}>pulgadas</span></span>
                                 
                             </button>
